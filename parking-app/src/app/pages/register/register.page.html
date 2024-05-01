@@ -1,0 +1,51 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-buttons slot="start">
+      <ion-back-button title=""></ion-back-button>
+    </ion-buttons>
+    <ion-title>UPark</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding" color="secondary">
+  <div class="flex-center">
+    <ion-card>
+      <ion-card-header>
+        <ion-card-title color="primary">Please enter:</ion-card-title>
+      </ion-card-header>
+      <ion-card-content>
+        <ion-item>
+          <ion-label position="floating">Email</ion-label>
+          <ion-input [(ngModel)]="email" type="email"></ion-input>
+        </ion-item>
+        <ion-item>
+          <ion-label position="floating">Username</ion-label>
+          <ion-input [(ngModel)]="username" type="username"></ion-input>
+        </ion-item>
+        <ion-item>
+          <ion-label position="floating">Password</ion-label>
+          <ion-input [(ngModel)]="password" type="Password"></ion-input>
+        </ion-item>
+        <ion-item>
+          <ion-label position="floating">Confirm Password</ion-label>
+          <ion-input [(ngModel)]="confirmPassword" type="Password"></ion-input>
+        </ion-item>
+        <ion-item> 
+          <ion-label position="floating">Plate Number</ion-label>
+          <ion-input [(ngModel)]="plateNumber"></ion-input>
+        </ion-item>
+        <p class="flex-center" *ngIf="isLoading">
+          <ion-spinner color="dark"></ion-spinner>
+        </p>
+        <p>Already have an account? <a href="/login"> Login now</a>.</p>
+
+      </ion-card-content>
+    </ion-card>
+  </div>
+
+  <div class="selector">
+     <ion-button (click)="register()"  shape="round" size="full" color="light">Register</ion-button>
+  </div>
+
+
+</ion-content>

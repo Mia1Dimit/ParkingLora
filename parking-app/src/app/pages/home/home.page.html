@@ -1,0 +1,48 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-buttons slot="start">
+    </ion-buttons>
+    <ion-title>UPark</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding" color="secondary">
+  <div class="username">
+    Welcome {{name}}, 
+  </div> 
+  <div id="welcomingImg">
+    <div id="textOnImg">
+      <h1>Book your next ticket here</h1>
+      <h2>Find your parking place in the campus of UoP</h2>
+    </div>
+    
+    <img src="../../assets/uniImg.jpg" alt="logo">
+  </div>
+  <div class="searchbar">
+    <input #searchInput id="searchInput" class="controls" type="text" placeholder="Insert your destination...">
+    
+  </div>
+
+  <div  class="flex-center">
+    <div class="upomnima">
+      <ion-checkbox class="check" id="check" slot="start" (ionChange)="_ionChange($event)">   </ion-checkbox>
+      <ion-label>  Electric Charger  </ion-label>
+      <ion-card >
+        <ion-card-title style="font-size:4vw">  Zone A 🔴  </ion-card-title>
+        <ion-card-title style="font-size:4vw">  Zone B 🟢  </ion-card-title>
+      </ion-card>
+    </div>
+    <div #map id="map">
+      
+    </div>
+    
+    <div id="description"><br></div>
+    
+  </div>
+  <div class="bottom-right-button">
+    <ion-button shape="round" (click)="chooseTicket()">Continue</ion-button>
+  </div> 
+
+</ion-content>
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDWOJNNsD5ZtFrpa8Nx5h_RAHy7AQM8hYE&libraries=places" 
+            async defer></script>

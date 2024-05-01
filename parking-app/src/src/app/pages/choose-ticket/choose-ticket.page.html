@@ -1,0 +1,48 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-buttons slot="start">
+      <ion-back-button title=""></ion-back-button>
+    </ion-buttons>
+    <ion-title>UPark</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+  <ion-toolbar>  
+    <ion-segment (ionChange)="segmentChanged($event)" [(ngModel)]="segment" color="primary">  
+      <ion-segment-button value="zoneA">
+        <ion-icon name="car-outline"></ion-icon>
+        <ion-label>ZONE A</ion-label>        
+      </ion-segment-button>
+    
+      <ion-segment-button value="zoneB">
+        <ion-icon name="car-outline"></ion-icon>
+        <ion-label>ZONE B</ion-label>
+      </ion-segment-button>
+    </ion-segment>  
+  </ion-toolbar>  
+
+  <div class="zoneA" *ngIf = "segment == 'zoneA'">
+    <ion-card button="true" (click)="book()">
+      <ion-card-header>
+        <ion-card-title>Parking Hlektrologwn</ion-card-title>
+        <ion-card-content>
+          Available slots: 6/30
+        </ion-card-content>
+      </ion-card-header>    
+    </ion-card>
+  </div>
+
+
+  <div class="zoneB" *ngIf = "segment == 'zoneB'">
+    <ion-card button="true" (click)="book()">
+      <ion-card-header>
+        <ion-card-title>Parking Estias</ion-card-title>
+        <ion-card-content>
+          Available slots: 6/30
+        </ion-card-content>
+      </ion-card-header>    
+    </ion-card>
+  </div>
+</ion-content>

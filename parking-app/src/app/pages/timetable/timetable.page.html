@@ -1,0 +1,41 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-title>Timetable & Pricing</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content color="secondary">
+  <div class="content">
+    <h1>Working Hours</h1>
+    <div class="timetable1">
+      The working hours of the UPark will follow the ones of the University. 
+      This means that the parking lots will be open from 7:00 to 22:00 every day from Monday to Saturday.
+
+    </div>
+    <div class="timetable2">
+      <br>During the day and depending on the high attendance of some places of the campus in specific hours, some parkings
+      will be moving from zone A to zone B to avoid traffic congestion.
+      The daily timetable is the following:<br><br>
+      
+      <div id="timetableImg">    
+        <img src="../../assets/timetable.png" alt="timetable">
+      </div>
+      <br>During public holidays that are recognised by the schedule of the UoP the parkings will be closed.
+      Also, in special days such as graduations or other events the timetable will be adapting.
+    </div>
+    <h1>Pricing</h1>
+    <div class="pricing">
+      The price of the ticket, no matter the vehicle, is:
+      <ul>
+        <li>1€ for Zone B</li>
+        <li>1.5€ for Zone A</li>
+      </ul>
+      The final price, which is paid when you leave the parking, is affected by an extra fine if you exceed the maximum
+      allowed duration that was shown in the initial booking. An amount of 0.5€ per 30 minutes will be continuesly adding to 
+      your current price until you free the parking spot.
+    </div>
+    <div class="bookButton">
+      <ion-button shape="round" (click)="goToBook()" color="secondary">Book now</ion-button>
+    </div> 
+  </div>
+</ion-content>

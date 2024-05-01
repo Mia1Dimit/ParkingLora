@@ -1,0 +1,101 @@
+.ion-padding {
+    color: black;
+    display: block;
+}
+
+.upomnima {
+    width: 200px;
+    position: absolute;
+    left: 0;
+    top: 0;
+    text-align: left;
+    margin: 0%;
+    display: block;
+    padding-top: 4px;
+    
+}
+
+.upomnima ion-card {
+    background-color: #d3d3d3;
+    width: 40%;
+    padding-left: 6px;
+}
+
+.upomnima ion-card ion-card-title{
+    font-weight: bold;
+}
+
+.searchbar {
+    display: block;
+}
+
+#searchInput {
+    height: 45px;
+    width: 100%;
+    color: black;
+}
+
+.upomnima ion-label {
+    color: black;
+    font-weight: bold;
+}
+
+.upomnima ion-checkbox {
+    margin-left: 7px;
+}
+
+.flex-center{
+    position: relative;
+    padding-left: 0;
+    height: 610px;
+}
+
+#map {
+    width: 100%;
+    height: 450px;
+}
+
+#content {
+    overflow: visible;
+}
+
+#welcomingImg {
+    height: 200px;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 10px;
+    position: relative;
+}
+
+#welcomingImg #textOnImg{
+    position: absolute;
+    text-align: left;
+    font-weight: bold;
+    top: 4%;
+}
+
+#welcomingImg #textOnImg h2{
+    font-size: 100%;
+   
+}
+
+#welcomingImg img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+}
+
+.bottom-right-button {
+    position: relative;
+    height: 50px;
+}
+
+.bottom-right-button ion-button{
+    position: absolute;
+    left: 100px;
+    padding-bottom: 8px;
+}

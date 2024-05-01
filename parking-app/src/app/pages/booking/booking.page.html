@@ -1,0 +1,73 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-buttons slot="start">
+      <ion-back-button title=""></ion-back-button>
+    </ion-buttons>
+    <ion-title>UPark</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding" color="secondary">
+  <div class="flex-center">
+    <ion-card>
+      <ion-card-header>
+        <ion-card-title color="primary"> {{username}}, review your booking...</ion-card-title>
+      </ion-card-header>
+        <ion-list>
+          <ion-item>
+            <ion-label>Plate:  {{plate}}</ion-label>
+          </ion-item>
+
+          <ion-item>
+            <ion-label>Slot:  {{slot}}</ion-label>
+          </ion-item>
+
+          <ion-item>
+            <ion-label>Duration:  {{duration}} hr</ion-label>
+          </ion-item>
+
+          <ion-item>
+            <ion-label>Price:  {{price}}€</ion-label>
+          </ion-item>
+
+        </ion-list>
+    </ion-card>
+  </div>
+
+
+
+  <div class="selector">
+     <ion-button   shape="round" size="full" color="primary" (click)="setBooking()">Book</ion-button>
+     
+     <p>{{ handlerMessage }}</p> 
+  </div>
+
+  <ion-modal [isOpen]="isModalOpen">
+    <ng-template>
+      <ion-header>
+        <ion-toolbar color="primary">
+          <ion-buttons slot="end">
+            <ion-button (click)="cancel()">Close</ion-button>
+          </ion-buttons>
+          <ion-title>UPark</ion-title>
+        </ion-toolbar>
+      </ion-header>
+
+      <ion-content class="ion-padding" color="secondary">
+
+        <ion-label>Your QR code is:</ion-label>
+        <div class="qrcodeImage">
+          <qrcode [qrdata]="username+slot" [colorDark]="'#000000'" [colorLight]="'#3dc2ff'" [width]="256" [errorCorrectionLevel]="'M'">
+          </qrcode>
+        </div>
+        <ion-label>You can view the details of your booking in <a href="/my-bookings">My Bookings</a>.</ion-label>
+
+      </ion-content>
+    </ng-template>
+  </ion-modal>
+
+  <div class="reverse-selector">
+    <ion-button   shape="round" size="full" color="light" (click)="cancelBooking()">Cancel</ion-button>
+    <p>{{ handlerMessage }}</p>
+ </div>
+</ion-content>

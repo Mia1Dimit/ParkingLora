@@ -1,0 +1,58 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+    <ion-title>UPark</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content color="secondary">
+
+  <ion-toolbar>  
+    <ion-segment (ionChange)="segmentChanged($event)" [(ngModel)]="segment" color="primary">  
+      <ion-segment-button value="zoneA">
+        <ion-icon name="car-outline"></ion-icon>
+        <ion-label>ZONE A</ion-label>        
+      </ion-segment-button>
+    
+      <ion-segment-button value="zoneB">
+        <ion-icon name="car-outline"></ion-icon>
+        <ion-label>ZONE B</ion-label>
+      </ion-segment-button>
+    </ion-segment>  
+  </ion-toolbar>  
+
+  <div class="zoneA" *ngIf = "zone == 'zoneA'">
+    <ion-card button="true" (click)="bookA()">
+      <ion-card-header>
+        <ion-card-title>{{titleA}}</ion-card-title>
+        <ion-card-content>
+              <ion-label>Available spots:{{availableSpotNumberA}}<br/>
+                Total spots:{{totalSpotNumberA}}<br/>
+                Maximum Parking Duration:{{maximumParkingDurationA}} hr<br/>
+                Electrical Charger:{{elchargerA}}<br/>
+                Ticket pirice: {{priceA}}€
+              </ion-label> 
+        </ion-card-content>
+      </ion-card-header>    
+    </ion-card>
+  </div>
+
+
+  <div class="zoneB" *ngIf = "zone == 'zoneB'">
+    <ion-card button="true" (click)="bookB()">
+      <ion-card-header>
+        <ion-card-title>{{titleB}}</ion-card-title>
+        <ion-card-content>
+              <ion-label>Available spots:{{availableSpotNumberB}}<br/>
+                Total spots:{{totalSpotNumberB}}<br/>
+                Maximum Parking Duration:{{maximumParkingDurationB}} hr<br/>
+                Electrical Charger:{{elchargerB}}<br/>
+                Ticket pirice: {{priceB}}€
+              </ion-label> 
+        </ion-card-content>
+      </ion-card-header>    
+    </ion-card>
+  </div>
+</ion-content>

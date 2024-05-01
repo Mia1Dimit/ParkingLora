@@ -1,0 +1,60 @@
+<ion-header class="bg_color">
+  <ion-toolbar color="primary">
+    <ion-buttons slot="start">
+      <ion-back-button title=""></ion-back-button>
+    </ion-buttons>
+    <ion-title>My Bookings</ion-title>
+  </ion-toolbar>
+
+  <ion-card>
+    <ion-card-header>
+      <ion-card-title color="primary">User Information:</ion-card-title>
+    </ion-card-header>
+    <ion-item>
+      <ion-label>Username:  {{username}}</ion-label>
+    </ion-item>
+  </ion-card>
+
+</ion-header>
+
+
+
+<ion-content color="secondary">
+
+  <ion-card *ngFor="let ticket of myTickets">
+    <ion-card-header>
+      <ion-card-title color="primary">Active Ticket:</ion-card-title>
+    </ion-card-header>
+      <ion-list>
+        <ion-item>
+          <ion-label>Plate: {{ticket.plate}}</ion-label>
+        </ion-item>
+
+        <ion-item>
+          <ion-label>Slot: {{ticket.slot}}</ion-label>
+        </ion-item>
+
+        <ion-item>
+          <ion-label>Duration: {{ticket.duration}}</ion-label>
+        </ion-item>
+
+        <ion-item>
+          <ion-label>Price: {{ticket.price}}</ion-label>
+        </ion-item>
+
+        <ion-item>
+          <ion-label>QR: </ion-label>
+          <div class="qrcodeImage">
+            <qrcode [qrdata]="username+ticket.slot" [colorDark]="'#000000'" [colorLight]="'#FFFFFF'" [width]="256" [errorCorrectionLevel]="'M'">
+            </qrcode>
+          </div>
+         </ion-item>
+
+      </ion-list>
+      
+  </ion-card>
+  
+
+
+</ion-content>
+<ion-button class="but" shape="round" (click)="goHome()">Home</ion-button>
