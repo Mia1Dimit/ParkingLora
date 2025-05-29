@@ -1,21 +1,32 @@
 # ParkingLora
-Αυτό το αρχείο περιλαμβάνει όλα τα βήματα που πρέπει να ακολουθήσει κανείς για να τρέξει την εφαρμογή μας.
-Το παραδοτέο απότελειται από:
-	 έναν φάκελο που λέγεται "parking-app" και περιέχει όλα τα απαραίτητα αρχεία για τη λειτουργία της εφαρμογής,
-	 έναν φάκελο που λέγεται "parking-app-backend" και περιέχει όλα τα απαραίτητα αρχεία για τη λειτουργία του server και την επικοινωνία του με την βάση δεδομένων.
 
-Για να έχετε μια πλήρη εικόνα της λειτουργικότητας της εφαρμογής μας θα πρέπει να τρέξετε τόσο τα αρχεία της εφαρμογής, 
-όσο και του server. Για να γίνει αυτό, πρέπει να ανοίξετε πρώτα δύο terminals:
-	 1) στη διεύθυνση .../parking-app 
-	 2) στη διεύιυνση .../parking-app-backend
+Welcome to **ParkingLora** — an innovative project focused on leveraging LoRa (Long Range) wireless technology to create smarter, more efficient parking solutions. If you are passionate about IoT, wireless communication, and real-world problem solving, this is an exciting opportunity to contribute and grow with us!
 
-Στο terminal 1) εκτελείται την εντολή "ionic serve", ενώ στο terminal 2) την εντολή "nodemon index".
+---
 
-Η εκτέλεση των παραπάνω εντολών και βημάτων θα οδηγήσει στο άνοιγμα μιας καρτέλας στο browser σας στη διεύθυνση
-http://localhost:8100/login. Από εκεί ξεκινά η λειτουργία της εφαρμογής.
-	
-Για να έχετε πρόσβαση στα δεδομένα της βάσης μπορείται να επισκεφτείτε τις εξής διευθύνσεις στο browser σας:
-   	 1) "http://localhost:3000/bookings" για να δείτε τα υπάρχοντα bookings
-	 2) "http://localhost:3000/groups" για να δείτε τα parkings και τα χαρακτηριστικά τους
-	 3) "http://localhost:3000/spots" για να δείτε τις θέσεις parking και τα χαρακτηριστικά τους
-	 4) "http://localhost:3000/users" για να δείτε τους καταχωρημένους χρήστες και τα στοιχεία τους
+## 🚗 About the Project
+
+**ParkingLora** is designed to address the growing challenges in urban parking management by utilizing LoRa-based sensors and communication modules. Our goal is to provide a scalable, low-power, and cost-effective system to monitor and manage parking spaces in real time.
+
+---
+
+## 🌟 What makes it interesting?
+
+- **Cutting-Edge Tech:** Work with LoRa, IoT, embedded systems, and cloud integrations.
+- **Growth Opportunities:** Tackle challenging problems and expand skill set.
+- **Impact:** Contribution improving city life by reducing congestion and optimizing resource usage.
+
+---
+
+## 🛠️ Tech Stack
+
+- **Languages:** C/C++, Python, JavaScript
+- **Technologies:** LoRaWAN, Embedded Systems, Sensors, MQTT, Web Dashboards
+- **Platforms:** Cloud Services
+- **Tools:** Git
+
+---
+
+## 📈 Project Status
+
+This project was implemented during the year 2023 for the completion of the course titled Internet of Things.
